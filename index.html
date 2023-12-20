@@ -28,13 +28,31 @@
         function Title() {
             return (
                 <h1 className='form__title'>Login</h1>
-            )
+            );
         }
 
-        function Subtitle() {
+        function Subtitle({ children }) {
             return (
-                <h2 className='form__text'>Boas-vindas! Faça seu login.</h2 >
-            )
+                <h2 className='form__text'>{children}</h2 >
+            );
+        }
+
+        function Button({ children }) {
+            return (
+                <button type='submit' className='form__button'>{children}</button>
+            );
+        }
+
+        function TypingField({ label, kind, placeholder }) {
+            return (
+                <div className='form__typing-field'>
+                    <label for='email'>{label}</label>
+                    <input type={kind}
+                        placeholder={placeholder}
+                        required
+                        id='email' />
+                </div>
+            );
         }
 
         function LoginPage() {
@@ -43,30 +61,25 @@
                     <img src='./img/image-login.png' alt='a black woman with curly hair wearing glasses and working on the computer, there is also the codeconnect logo' />
                     <section>
                         <form>
-                            <Title />
-                            <Subtitle />
-                            <div className='form__typing-field'>
-                                <label for='email'>E-mail ou usuário</label>
-                                <input type='email'
-                                    placeholder='Digite o seu e-mail ou usuário'
-                                    required
-                                    id='email' />
-                                <div className='form__typing-field'>
-                                    <label for='senha'>Senha</label>
-                                    <input type='password'
-                                        placeholder='Digite sua senha'
-                                        required
-                                        id='senha' />
-                                </div>
-                            </div>
+                            <Title>Login</Title>
+                            <Subtitle>Boas vindas! Faça o seu login</Subtitle>
+                            <TypingField label='E-mail ou usuário'
+                                kind='email'
+                                placeholder='Digite o seu e-mail ou usuário'
+                            />
+                            <TypingField label='Senha'
+                                kind='password'
+                                placeholder='Digite a sua senha' />
+                            <Button>Login</Button>
                         </form>
                     </section>
                 </div>
-            )
+            );
         }
 
 
-        ReactDOM.createRoot(document.getElementById('root')).render(<LoginPage />)
+
+        ReactDOM.createRoot(document.getElementById('root')).render(<LoginPage />);
 
     </script>
 
