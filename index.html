@@ -25,6 +25,8 @@
         integrity="sha512-MIXku7j6pJ0hqd2T4WXZMGerp3BU9B91rfLRDp/McDBNNdnwTD+yLJaz9AHcYXT6k16dYTkG9S2KRPGxaBIfBQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/babel">
+
+
         function Title({ children }) {
             return (
                 <h1 className='form__title'>{children}</h1>
@@ -40,6 +42,43 @@
         function Button({ children }) {
             return (
                 <button type='submit' className='form__button'>{children}</button>
+            );
+        }
+
+        function Checkbox() {
+            return (
+                <>
+                    <div className='form__field-checkbox'>
+                        <input type='checkbox' id='lembrar' />
+                        <label for='lembrar' />
+                    </div>
+                    <p className='form__options-text'>Lembrar-me</p>
+                </>
+            );
+        }
+
+        function Text({ clas, children }) {
+            return (
+                <p className={clas}>{children}</p>
+            );
+        }
+
+        function ItemSocialNetworks({ link, name }) {
+            return (
+                <li>
+                    <a href={link}>
+                        <img src={`./img/${name}.svg`} alt={`ícon do ${name}`} />
+                        {name}
+                    </a>
+                </li>
+            );
+        }
+
+        function Link({ children }) {
+            return (
+                <a href='#' className='container-links__link'>
+                    {children}
+                </a>
             );
         }
 
@@ -72,7 +111,7 @@
                     <section>
                         <form onSubmit={handleSubmit}>
                             <Title>Login</Title>
-                            <Subtitle>Boas vindas! Faça o seu login</Subtitle>
+                            <Subtitle>Boas-vindas! Faça o seu login</Subtitle>
                             <TypingField label='E-mail ou usuário'
                                 kind='email'
                                 placeholder='Digite o seu e-mail ou usuário'
@@ -85,14 +124,27 @@
                                 value={password}
                                 setValue={setPassword}
                             />
+                            <fieldset className='form__options'>
+                                <Checkbox />
+                                <p>
+                                    <a href='#' aria-label='Recuperar senha esquecida'>Esqueci a senha</a>
+                                </p>
+                            </fieldset>
                             <Button>Login</Button>
                         </form>
+                        <div className='container-links'>
+                            <Text clas='container-links__title'>ou entre com outras contas</Text>
+                            <ul>
+                                <ItemSocialNetworks link='https://www.github.com' name='Github' />
+                                <ItemSocialNetworks link='https://www.google.com' name='Google' />
+                            </ul>
+                            <Text classe='container-links__text'>Ainda não tem conta?</Text>
+                            <Link>Crie seu cadastro!</Link>
+                        </div>
                     </section>
                 </div>
             );
         }
-
-
 
         ReactDOM.createRoot(document.getElementById('root')).render(<LoginPage />);
 
