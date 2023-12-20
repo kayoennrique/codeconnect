@@ -1,0 +1,36 @@
+:root {
+    --font: 'Prompt', sans-serif;
+    --highlight-green: #81FE88;
+    --petroleum-green: #132E35;
+    --graphite: #01080E;
+    --dark-gray: #171D1F;
+    --medium-gray: #888888;
+    --gray: #3E3E3F;
+    --light-gray: #BCBCBC;
+    --offwhite: #E1E1E1;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font);
+    background: url('../img/simbol.png') left 10rem top no-repeat,
+        url('../img/simbol.png') right 10rem bottom no-repeat,
+        var(--graphite);
+    background-size: 22.5rem;
+    color: var(--white);
+    height: 100vh;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
