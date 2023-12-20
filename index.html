@@ -25,9 +25,9 @@
         integrity="sha512-MIXku7j6pJ0hqd2T4WXZMGerp3BU9B91rfLRDp/McDBNNdnwTD+yLJaz9AHcYXT6k16dYTkG9S2KRPGxaBIfBQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/babel">
-        function Title() {
+        function Title({ children }) {
             return (
-                <h1 className='form__title'>Login</h1>
+                <h1 className='form__title'>{children}</h1>
             );
         }
 
@@ -43,33 +43,48 @@
             );
         }
 
-        function TypingField({ label, kind, placeholder }) {
+        function TypingField({ label, kind, placeholder, value, setValue }) {
             return (
                 <div className='form__typing-field'>
-                    <label for='email'>{label}</label>
+                    <label for={kind}>{label}</label>
                     <input type={kind}
                         placeholder={placeholder}
                         required
-                        id='email' />
+                        id={kind}
+                        value={value}
+                        onChange={(e) => setValue(e.target.value)} />
                 </div>
             );
         }
 
         function LoginPage() {
+            const [email, setEmail] = React.useState('');
+            const [password, setPassword] = React.useState('');
+
+            const handleSubmit = (e) => {
+                e.preventDefault();
+                console.log('email ' + email);
+                console.log('senha ' + password);
+            }
             return (
                 <div className='container-login'>
                     <img src='./img/image-login.png' alt='a black woman with curly hair wearing glasses and working on the computer, there is also the codeconnect logo' />
                     <section>
-                        <form>
+                        <form onSubmit={handleSubmit}>
                             <Title>Login</Title>
                             <Subtitle>Boas vindas! Faça o seu login</Subtitle>
                             <TypingField label='E-mail ou usuário'
                                 kind='email'
                                 placeholder='Digite o seu e-mail ou usuário'
+                                value={email}
+                                setValue={setEmail}
                             />
                             <TypingField label='Senha'
                                 kind='password'
-                                placeholder='Digite a sua senha' />
+                                placeholder='Digite a sua senha'
+                                value={password}
+                                setValue={setPassword}
+                            />
                             <Button>Login</Button>
                         </form>
                     </section>
