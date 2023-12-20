@@ -14,6 +14,61 @@
 </head>
 
 <body>
+    <div id="root"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"
+        integrity="sha512-8Q6Y9XnTbOE+JNvjBQwJ2H8S+UV4uA6hiRykhdtIyDYZ2TprdNmWOUaKdGzOhyr4dCyk287OejbPvwl7lrfqrQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"
+        integrity="sha512-MOCpqoRoisCTwJ8vQQiciZv0qcpROCidek3GTFS6KTk2+y7munJIlKCVkFCYY+p3ErYFXCjmFjnfTTRSC1OHWQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.3/babel.min.js"
+        integrity="sha512-MIXku7j6pJ0hqd2T4WXZMGerp3BU9B91rfLRDp/McDBNNdnwTD+yLJaz9AHcYXT6k16dYTkG9S2KRPGxaBIfBQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/babel">
+        function Title() {
+            return (
+                <h1 className='form__title'>Login</h1>
+            )
+        }
+
+        function Subtitle() {
+            return (
+                <h2 className='form__text'>Boas-vindas! Faça seu login.</h2 >
+            )
+        }
+
+        function LoginPage() {
+            return (
+                <div className='container-login'>
+                    <img src='./img/image-login.png' alt='a black woman with curly hair wearing glasses and working on the computer, there is also the codeconnect logo' />
+                    <section>
+                        <form>
+                            <Title />
+                            <Subtitle />
+                            <div className='form__typing-field'>
+                                <label for='email'>E-mail ou usuário</label>
+                                <input type='email'
+                                    placeholder='Digite o seu e-mail ou usuário'
+                                    required
+                                    id='email' />
+                                <div className='form__typing-field'>
+                                    <label for='senha'>Senha</label>
+                                    <input type='password'
+                                        placeholder='Digite sua senha'
+                                        required
+                                        id='senha' />
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+            )
+        }
+
+
+        ReactDOM.createRoot(document.getElementById('root')).render(<LoginPage />)
+
+    </script>
 
 </body>
 
