@@ -1,0 +1,11 @@
+.slash-search {
+  width: 100%;
+  color: var(--gray-light);
+  padding: .5em 1em .5em 4em;
+  height: 49px;
+  font-family: var(--font);
+  font-size: 22px;
+  background: var(--gray-dark) url('./assets/search.svg') no-repeat 32px;
+  border: none;
+  border-radius: 4px;
+}
