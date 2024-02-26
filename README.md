@@ -18,7 +18,7 @@ During this course we will use:
 *Props
   
 ## 🎨 Figma Link
-To view the project's Figma, click [here](https://www.figma.com/file/SASyBm2k3IlqrO8qI1Otg1/CodeConnect-%7C-React%3A-Componentiza%C3%A7%C3%A3o-e-conceitos-b %C3%A1sicos-(JSX)?type=design&node-id=201-4085&mode=design&t=MgsA8qxtnyuhVUCl-4)
+To view the project's Figma, click [here](https://www.figma.com/file/SASyBm2k3IlqrO8qI1Otg1/CodeConnect-%7C-React%3A-Componentiza%C3%A7%C3%A3o-e-conceitos-b%C3%A1sicos-(JSX)?type=design&node-id=201-4085&mode=design&t=MgsA8qxtnyuhVUCl-4)
 
 ## 🛠️ How to Open and Run the Project
 To open and run the project, run ``npm install`` to install the dependencies and ``npm run dev`` to start the project.
