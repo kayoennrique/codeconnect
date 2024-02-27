@@ -1,29 +1,36 @@
-## CodeConnect
-A social network for developers to share their projects and code snippets, enabling interaction via comment or sharing.
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-<img src='https://imgur.com/XT1O3BZ.png' alt='application screenshot' width='550px'/>
+## Getting Started
 
-## 🔨 Project Features
-In this part of the project we developed the application's feed screen. It has a navigation menu, a search bar, a filter section and an ordering section, as well as cards that show a summary of each post made on the platform. At this time, all elements are visual only.
+First, run the development server:
 
-## ✔️ Techniques and Technologies Used
-During this course we will use:
-* Figma
-* JavaScript
-* React
-* CSS
-* Componentization
-* Hooks (useState and useEffect)
-* Fetch API
-*Props
-  
-## 🎨 Figma Link
-To view the project's Figma, click [here](https://www.figma.com/file/SASyBm2k3IlqrO8qI1Otg1/CodeConnect-%7C-React%3A-Componentiza%C3%A7%C3%A3o-e-conceitos-b%C3%A1sicos-(JSX)?type=design&node-id=201-4085&mode=design&t=MgsA8qxtnyuhVUCl-4)
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-## 🛠️ How to Open and Run the Project
-To open and run the project, run ``npm install`` to install the dependencies and ``npm run dev`` to start the project.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Then, access http://127.0.0.1:5173/ in your browser.
+You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-## 📚 More Information about the Project
-CodeConnect is a fictional non-profit social network. The main idea is to start a React project using Vite and explore componentization, the use of hooks and props to create a page.
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
