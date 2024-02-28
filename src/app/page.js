@@ -1,6 +1,7 @@
 import { CardPost } from "@/components/CardPost";
 import logger from "@/logger";
 import styles from './page.module.css';
+import Link from "next/link";
 
 
 async function getAllPosts(page) {
@@ -14,11 +15,13 @@ async function getAllPosts(page) {
 }
 
 export default async function Home() {
-  const { data: posts } = await getAllPosts(1);
+  const { data: posts, prev, next } = await getAllPosts(1);
 
   return (
     <main className={styles.grid}>
       {posts.map(post => <CardPost key={post.id} post={post} />)}
+      {prev && <Link href={`/?page=${prev}`}>Página anterior</Link>}
+      {next && <Link href={`/?page=${next}`}>Próxima página</Link>}
     </main>
   );
 }
