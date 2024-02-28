@@ -1,6 +1,6 @@
 import { Prompt } from 'next/font/google';
-import { Aside } from './components/Aside';
 import './globals.css';
+import { Aside } from '@/components/Aside';
 
 export const metadata = {
   title: "Code Connect",
