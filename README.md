@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js: Server-Side component strategies
 
-## Getting Started
+Next.js practice focused on Server-Side Rendering (SSR) and development of modern web applications.
 
-First, run the development server:
+## 🔨 Project Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This is a development of a dynamic blog with features such as:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Listing of posts with pagination.
+- Detailed display of each post.
+- Server-side rendering.
+- Routing with App Router.
+- Integration with APIs using fetch
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## ✔️ Techniques and Technologies Used
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+The main techniques and technologies covered are:
 
-## Learn More
+- `Next.js`: Framework for React with SSR features.
+- `Fetch API`: Make HTTP requests to fetch data.
+- `remark`: Library for processing Markdown in HTML.
+- `winston`: Advanced logging with different levels and transports.
+- `React Components`: Development of reusable components.
+- `CSS Modules`: Modular and scoped styling.
+- `Client-Side Navigation`: Efficient navigation between pages with Next.js.
 
-To learn more about Next.js, take a look at the following resources:
+## 🎯 Project Challenges
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Implementation of advanced features, such as:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Consumption of a posts API.
+- Markdown rendering in React components.
+- Log and error management.
 
-## Deploy on Vercel
+## 🛠️ Open and Run the Project
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+After downloading the project, you can open it with your preferred code editor. Follow these steps:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Open the terminal in the project directory.
+- Run `npm install` to install dependencies.
+- Start the development server with `npm run dev`.
+- Access `http://localhost:3000` in the browser to see the project.
+
+## 📚 More Project Information
+
+I hope you do the most of this project to improve yourself! And if you want to say hello, I'm there on LinkedIn [Kayo Ennrique Pereira](https://www.linkedin.com/in/kayoennrique/). :wave:
