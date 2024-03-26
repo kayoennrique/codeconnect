@@ -7,13 +7,17 @@ import db from "../../prisma/db";
 
 async function getAllPosts(page) {
   try {
-    const posts = await db.post.findMany();
+    const posts = await db.post.findMany({
+      include: {
+        author: true
+      }
+    })
 
-    return { data: posts, prev: null, next: null };
+    return { data: posts, prev: null, next: null }
 
   } catch (error) {
     logger.error('Falha ao obter posts', { error })
-    return { data: [], prev: null, next: null };
+    return { data: [], prev: null, next: null }
   }
 }
 
