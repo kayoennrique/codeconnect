@@ -105,3 +105,4 @@
 {"level":"info","message":"Posts obtidos com sucesso"}
 {"level":"info","message":"Posts obtidos com sucesso"}
 {"error":{},"level":"error","message":"Falha ao obter o post com o slug: ","slug":"sass-simplificando-o-csss"}
+{"error":{"clientVersion":"5.11.0","name":"PrismaClientInitializationError"},"level":"error","message":"Falha ao obter posts"}
