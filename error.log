@@ -3,3 +3,4 @@
 {"level":"error","message":"Ops, alguma coisa correu mal"}
 {"error":{},"level":"error","message":"Falha ao obter o post com o slug: ","slug":"sass-simplificando-o-csss"}
 {"error":{"clientVersion":"5.11.0","name":"PrismaClientInitializationError"},"level":"error","message":"Falha ao obter posts"}
+{"error":{"clientVersion":"5.11.0","name":"PrismaClientInitializationError"},"level":"error","message":"Falha ao obter posts"}
