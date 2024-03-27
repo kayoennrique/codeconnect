@@ -34,3 +34,8 @@ a {
 a:visited {
   color: #81FE88;
 }
+
+::backdrop {
+  background-color: #171D1F;
+  opacity: 0.8s;
+}
