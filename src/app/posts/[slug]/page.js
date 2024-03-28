@@ -1,4 +1,4 @@
-import logger from "@/logger";
+import logger from "@/logger"
 import { remark } from 'remark';
 import html from 'remark-html';
 
@@ -6,6 +6,7 @@ import styles from './page.module.css'
 import { CardPost } from "@/components/CardPost";
 import db from "../../../../prisma/db";
 import { redirect } from "next/navigation";
+import { CommentList } from "@/components/CommentList";
 
 
 async function getPostBySlug(slug) {
@@ -17,12 +18,16 @@ async function getPostBySlug(slug) {
       },
       include: {
         author: true,
-        comments: true
+        comments: {
+          include: {
+            author: true
+          }
+        }
       }
     })
 
     if (!post) {
-      throw new Error(`Post com o slug ${slug} não foi encontrado`);
+      throw new Error(`Post com o slug ${slug} não foi encontrado`)
     }
 
     const processedContent = await remark()
@@ -30,30 +35,35 @@ async function getPostBySlug(slug) {
       .process(post.markdown);
     const contentHtml = processedContent.toString();
 
-    post.markdown = contentHtml;
+    post.markdown = contentHtml
 
-    return post;
+    return post
   } catch (error) {
     logger.error('Falha ao obter o post com o slug: ', {
       slug,
       error
     })
   }
-  redirect('/not-found');
+  redirect('/not-found')
 }
 
 const PagePost = async ({ params }) => {
 
   const post = await getPostBySlug(params.slug);
 
-  return (
-    <div>
-      <CardPost post={post} highlight />
-      <h3 className={styles.subtitle}>Código:</h3>
-      <div className={styles.code}>
-        <div dangerouslySetInnerHTML={{ __html: post.markdown }} />
-      </div>
+  return (<div>
+    <CardPost post={post} highlight />
+    <h3 className={styles.subtitle}>Código:</h3>
+    <div className={styles.code}>
+      <div dangerouslySetInnerHTML={{ __html: post.markdown }} />
     </div>
+    <div>
+      <h2>
+        Comentários
+      </h2>
+      <CommentList comments={post.comments} />
+    </div>
+  </div>
   );
 }
 
